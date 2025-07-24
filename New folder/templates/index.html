@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flask Calculator</title>
+    <style>
+        body {
+            font-family: Arial;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #f0f0f0;
+        }
+
+        .calculator {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px #ccc;
+        }
+
+        .screen {
+            width: 100%;
+            font-size: 24px;
+            text-align: right;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+        }
+
+        .buttons {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+        }
+
+        button {
+            padding: 20px;
+            font-size: 18px;
+            background: #eee;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #ddd;
+        }
+
+        .equal {
+            background: #4CAF50;
+            color: white;
+        }
+
+        .clear {
+            background: #f44336;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <form method="POST" class="calculator">
+        <input type="text" name="expression" class="screen" value="{{ expression }}" readonly>
+
+        <div class="buttons">
+            {% for label in ['7','8','9','/',
+                             '4','5','6','*',
+                             '1','2','3','-',
+                             '0','.','=','+'] %}
+                <button type="submit" name="btn" value="{{ label }}"
+                    class="{% if label == '=' %}equal{% endif %}">
+                    {{ label }}
+                </button>
+            {% endfor %}
+            <button type="submit" name="btn" value="C" class="clear">C</button>
+        </div>
+    </form>
+</body>
+</html>

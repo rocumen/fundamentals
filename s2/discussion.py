@@ -25,24 +25,25 @@ pemdas = 1 + (2-1) * (6/2)
 
 #comparison operator
 
-#==
-a = 5
-b = 5
+#== equal
+a = "s"
+b = "a"
 
-#print(a==b)
+# print(a==b)
 
-#!=
-#print(a!=b)
+#!= not equal
+print(a!=b)
 
-#>
+#> greater than
 #print(a>b)
 
-#<
+#< less than
 #print(a<b)
 
-#>=
-#print(a>=b)
-#<=
+#>= greater than or equal
+# print(a>=b)
+
+#<= less than or equal
 #print(a<=b)
 
 ################
@@ -69,15 +70,33 @@ legal_age = 17
 # else:
 #     print("Di kapa pede mag drive at di kapa pde uminom ng alak kupal ka")
 
-grade = int(input("input your grade:"))
 
-if grade >= 90:
-    print("A")
-elif grade >= 80:
-    print("B")
-elif grade >= 70:
-    print("C")
-else:
-    print("Invalid input")
+# grade = int(input("input your grade:"))
+
+# if grade >= 70 and grade <= 79:
+#     print("C")
+# elif grade >= 80 and grade <= 89:
+#     print("B")
+# elif grade >= 90:
+#     print("A")
+# else:
+#     print("Invalid input")
+
+#70<=grade<=79 #and
+
+
+#ERROR HANDLING
+# try:
+#     grade = int(input("input your grade:"))
+#     if grade >= 70 and grade <= 79:
+#         print("C")
+#     elif grade >= 80 and grade <= 89:
+#         print("B")
+#     elif grade >= 90:
+#         print("A")
+
+# except ValueError:
+#     print("Invalid input: Please entere a whole number")
+
 
 
